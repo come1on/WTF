@@ -82,22 +82,18 @@ namespace WTF_WIKI_TRANS_FUN
         {
             Task<TranslateResponse> responseTask = null;
             TranslateRequest request = new TranslateRequest();
-            try { responseTask = request.SearchTextAsync(translatebleText.Text, LanguageChoices());
+            try {
+                responseTask = request.SearchTextAsync(translatebleText.Text, LanguageChoices());
                 if (responseTask != null)
                 {
                     responseTask.GetAwaiter().OnCompleted(
                         () =>
                         {
-                            try { 
-                                if (responseTask.Result != null)
-                                { 
-                            TranslateResponse transResponse = responseTask.Result;
-                            Translated.Text = transResponse.contents.translated;
-                            Text.Text = transResponse.contents.text;
-                            Translation.Text = transResponse.contents.translation;
-                                }
-                               
-
+                            try {
+                                TranslateResponse transResponse = responseTask.Result;                           
+                                Translated.Text = transResponse.contents.translated;
+                                Text.Text = transResponse.contents.text;
+                                Translation.Text = transResponse.contents.translation;
                             }
                             catch (Exception e)
                             { MessageBox.Show(e.InnerException.Message); }

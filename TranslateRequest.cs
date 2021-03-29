@@ -20,20 +20,13 @@ namespace WTF_WIKI_TRANS_FUN
 
         private async Task<TranslateResponse> Translate(string tText, string language)
         {
-            TranslateResponse transResponse = null;
-             
-            
             HttpResponseMessage response = await _client.GetAsync($"{language}.json/?text={tText}");
             if (response.IsSuccessStatusCode)
-                transResponse = await response.Content.ReadFromJsonAsync<TranslateResponse>();
-           
+                return await response.Content.ReadFromJsonAsync<TranslateResponse>();
             else if (response.StatusCode == System.Net.HttpStatusCode.TooManyRequests)
-                
                 throw new TooManyRequestsException("Das hat nicht geklappt. Du hast zu viel angefragt warte mal");
             
-            
-            
-            return transResponse;
+            return null;
         }
 
         public async Task<TranslateResponse> SearchTextAsync(string text, string language)
