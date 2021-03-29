@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.1433
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WTF_WIKI_TRANS_FUN", "WTF_WIKI_TRANS_FUN.csproj", "{B201BC31-15CB-4539-8675-E083B54314E9}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B201BC31-15CB-4539-8675-E083B54314E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B201BC31-15CB-4539-8675-E083B54314E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B201BC31-15CB-4539-8675-E083B54314E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B201BC31-15CB-4539-8675-E083B54314E9}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EEC3B80D-F608-4046-9286-44F93C09A062}
+	EndGlobalSection
+EndGlobal
