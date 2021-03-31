@@ -6,9 +6,8 @@ using System.Threading.Tasks;
 
 namespace WTF_WIKI_TRANS_FUN
 {
-   public class Error
+   public class WikiResponse
     {
-        int code { get; set; }
-        string message { get; set; }
+      public string URL { get; set; }
     }
 }

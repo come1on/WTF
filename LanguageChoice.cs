@@ -29,15 +29,10 @@
             get => text;
             set
             {
-                ChoiceLanguage(value);
-                text = value;
+                            text = value;
             }
         }
 
-        public void ChoiceLanguage(string Message)
-        {
-            if (Message == "Auswahlsprache")
-                throw new NoLanguageException("Keine Sprach ausgewählt");
-        }
+        
     }
 }

@@ -25,15 +25,14 @@ namespace WTF_WIKI_TRANS_FUN
                 return await response.Content.ReadFromJsonAsync<TranslateResponse>();
             else if (response.StatusCode == System.Net.HttpStatusCode.TooManyRequests)
                 throw new TooManyRequestsException("Das hat nicht geklappt. Du hast zu viel angefragt warte mal");
-            
+
             return null;
         }
 
         public async Task<TranslateResponse> SearchTextAsync(string text, string language)
         {
-            return await Translate(text, language); 
-      
+            return await Translate(text, language);
+
         }
     }
 }
-

@@ -18,7 +18,7 @@
         <TextBox x:Name="Suchfeld"  HorizontalAlignment="Left" Height="52" Margin="22,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="635" AutomationProperties.IsColumnHeader="True" Text="Suchfeld" Grid.Row="1" />
 
 
-        <Button Click="TextSuche"  x:Name="Suchen" Content="Suchen" HorizontalAlignment="Left" Margin="674,130,0,0" VerticalAlignment="Top" Width="96" Height="29" Grid.Row="1"/>
+        <Button Click="TextSuche"  x:Name="Suchen" Content="Translation" HorizontalAlignment="Left" Margin="688,124,0,0" VerticalAlignment="Top" Width="96" Height="29" Grid.Row="1" />
         <ComboBox  Name="DropDownMenu" SelectedIndex="0" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="140" SelectionChanged ="MenuChoiceUser">
             <ListBoxItem Content="Funktionsauswahl" />
             <ListBoxItem Content="Translate" />
@@ -33,18 +33,16 @@
             <ListBoxItem Content="Pirate"/>
             <ListBoxItem Content="Kraut"/>
         </ComboBox>
-        <ComboBox x:Name="WikiSearch" HorizontalAlignment="Left" Margin="165,10,0,0" VerticalAlignment="Top" Width="140" Visibility="Hidden" SelectionChanged="MenuChoiceUser">
-            <ListBoxItem Content="Überschrift"/>
-            <ListBoxItem Content="Links"/>
-            <ListBoxItem Content="Auszüge"/>
-        </ComboBox>
-        <TextBox x:Name="ResultsNumber" HorizontalAlignment="Left" Height="23" Margin="321,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="151" Opacity="0.4" Visibility="Hidden" Text="1-5 Ergebnisse" />
+
+
+
 
 
         <TextBlock x:Name="Translated" HorizontalAlignment="Left" Margin="16,84,0,83" Width="760" Height="50"/>
         <TextBlock x:Name="Text" HorizontalAlignment="Left" Margin="16,156,0,28" Width="760" Height="50"/>
         <TextBlock x:Name="Translation"  Margin="16,21,24,146"  Width="760" Height="50" Grid.Row="1"/>
-
+        <Button Click="WikiSuche"  x:Name="Wiki" Content="Wikipediasuche" HorizontalAlignment="Left" Margin="688,153,0,0" VerticalAlignment="Top" Width="96" Height="29" Grid.Row="1" RenderTransformOrigin="0.519,-0.447" />
+        <WebBrowser x:Name="Bloedmann" Margin="0,38,0,92" Grid.RowSpan="2" Visibility="Hidden"/>
 
 
 
