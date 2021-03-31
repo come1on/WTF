@@ -1,6 +1,6 @@
 ﻿namespace WTF_WIKI_TRANS_FUN
 {
-    class LanguageChoice
+    internal class LanguageChoice
     {
         public string LanguageChoices(int Index)
         {
@@ -29,10 +29,8 @@
             get => text;
             set
             {
-                            text = value;
+                text = value;
             }
         }
-
-        
     }
 }

@@ -1,10 +1,7 @@
 ﻿namespace WTF_WIKI_TRANS_FUN
 {
-    interface IChioce
+    internal interface IChioce
     {
         void Translate(TranslatebleText option);
-
-
-
     }
 }

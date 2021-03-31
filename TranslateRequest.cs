@@ -32,7 +32,6 @@ namespace WTF_WIKI_TRANS_FUN
         public async Task<TranslateResponse> SearchTextAsync(string text, string language)
         {
             return await Translate(text, language);
-
         }
     }
 }
