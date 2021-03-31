@@ -32,6 +32,12 @@ namespace WTF_WIKI_TRANS_FUN
             {
                 Languages.Visibility = Visibility.Visible;
                 Bloedmann.Visibility = Visibility.Hidden;
+
+                
+
+                label_dein_text.Visibility = Visibility.Visible;
+                label_translated_language.Visibility = Visibility.Visible;
+                label_translated_text.Visibility = Visibility.Visible;
                 
                
             }
@@ -39,11 +45,19 @@ namespace WTF_WIKI_TRANS_FUN
             {
                 Bloedmann.Visibility = Visibility.Visible;
                 Languages.Visibility = Visibility.Hidden;
+
+                label_dein_text.Visibility = Visibility.Hidden;
+                label_translated_language.Visibility = Visibility.Hidden;
+                label_translated_text.Visibility = Visibility.Hidden;
             }
             else if (Languages != null)
             {
                 Languages.Visibility = Visibility.Hidden;
                 Bloedmann.Visibility = Visibility.Hidden;
+
+                label_dein_text.Visibility = Visibility.Hidden;
+                label_translated_language.Visibility = Visibility.Hidden;
+                label_translated_text.Visibility = Visibility.Hidden;
             }
 
 

@@ -55,9 +55,9 @@
         <TextBlock x:Name="Translation"  Margin="32,54,40,113"  Width="760" Height="50" Grid.Row="1" Grid.ColumnSpan="2"/>
         <Button Click="WikiSuche"  x:Name="Wiki" Content="Wikipediasuche" HorizontalAlignment="Left" Margin="641,160,0,0" VerticalAlignment="Top" Width="96" Height="29" Grid.Row="1" RenderTransformOrigin="0.519,-0.447" Grid.Column="1" />
         <WebBrowser x:Name="Bloedmann" Margin="0,38,0,92" Grid.RowSpan="2" Visibility="Hidden" Grid.ColumnSpan="2"/>
-        <Label Content="Übersetzter Text" HorizontalAlignment="Left" Margin="22,46,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" FontWeight="Bold"/>
-        <Label Content="Dein Text" HorizontalAlignment="Left" Margin="22,136,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" FontWeight="Bold"/>
-        <Label Content="Übersetzte Sprache&#xD;&#xA;" HorizontalAlignment="Left" Margin="22,20,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.ColumnSpan="2" FontWeight="Bold" Height="27"/>
+        <Label x:Name="label_translated_text" Content="Übersetzter Text" HorizontalAlignment="Left" Margin="22,46,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" FontWeight="Bold" Visibility="Hidden"/>
+        <Label x:Name="label_dein_text" Content="Dein Text" HorizontalAlignment="Left" Margin="22,136,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" FontWeight="Bold" Visibility="Hidden"/>
+        <Label x:Name="label_translated_language" Content="Übersetzte Sprache&#xD;&#xA;" HorizontalAlignment="Left" Margin="22,20,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.ColumnSpan="2" FontWeight="Bold" Height="27" Visibility="Hidden"/>
 
 
 
