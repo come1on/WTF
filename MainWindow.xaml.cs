@@ -15,9 +15,15 @@ namespace WTF_WIKI_TRANS_FUN
         {
             InitializeComponent();
 
-            MessageBox.Show("Willkommen bei WTF! Hier kannst du entweder einen Text deiner Wahl in deine lieblings Fantasysprache übersetzten lassen oder" +
-                "nach dem Thema deines Begehrens bei Wikipedia suchen! Wähle dazu einfach im Menü deine gewünschte Funktion aus und gebe im Suchfeld deine Anfrage ein." +
+            start_popup pop_up_window = new start_popup();
+
+            pop_up_window.ShowDialog();
+
+            /* MessageBox.Show("Willkommen bei WTF! Hier kannst du entweder einen Text deiner Wahl in deine lieblings Fantasysprache übersetzten lassen oder" +
+                "nach dem Thema deines Begehrens bei Wikipedia suchen! Wähle dazu einfach im Menü deine gewünschte Funktion aus und gebe im Suchfeld deine Anfrage ein. " +
                 "Viel Spaß!");
+            */
+            
         }
 
         public void MenuChoiceUser(object sender, System.Windows.Controls.SelectionChangedEventArgs e)

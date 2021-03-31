@@ -5,9 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WTF_WIKI_TRANS_FUN"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="WTF - Wiki Translation Fun" Height="450" Width="832" WindowStartupLocation="CenterScreen">
 
-    <Grid>
+    <Grid RenderTransformOrigin="0.5,0.5">
+        <Grid.RenderTransform>
+            <TransformGroup>
+                <ScaleTransform/>
+                <SkewTransform/>
+                <RotateTransform Angle="0.118"/>
+                <TranslateTransform/>
+            </TransformGroup>
+        </Grid.RenderTransform>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="47*"/>
+            <ColumnDefinition Width="753*"/>
+        </Grid.ColumnDefinitions>
         <Grid.DataContext>
             <local:TranslateResponse/>
         </Grid.DataContext>
@@ -15,17 +27,17 @@
             <RowDefinition/>
             <RowDefinition/>
         </Grid.RowDefinitions>
-        <TextBox x:Name="Suchfeld"  HorizontalAlignment="Left" Height="52" Margin="22,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="635" AutomationProperties.IsColumnHeader="True" Text="Suchfeld" Grid.Row="1" />
+        <TextBox x:Name="Suchfeld"  HorizontalAlignment="Left" Height="52" Margin="22,130,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="635" AutomationProperties.IsColumnHeader="True" Text="Suchfeld" Grid.Row="1" Grid.ColumnSpan="2" />
 
 
-        <Button Click="TextSuche"  x:Name="Suchen" Content="Translation" HorizontalAlignment="Left" Margin="688,124,0,0" VerticalAlignment="Top" Width="96" Height="29" Grid.Row="1" />
-        <ComboBox  Name="DropDownMenu" SelectedIndex="0" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="140" SelectionChanged ="MenuChoiceUser">
+        <Button Click="TextSuche"  x:Name="Suchen" Content="Translation" HorizontalAlignment="Left" Margin="641,124,0,0" VerticalAlignment="Top" Width="96" Height="29" Grid.Row="1" Grid.Column="1" />
+        <ComboBox  Name="DropDownMenu" SelectedIndex="0" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="140" SelectionChanged ="MenuChoiceUser" Grid.ColumnSpan="2">
             <ListBoxItem Content="Funktionsauswahl" />
             <ListBoxItem Content="Translate" />
             <ListBoxItem Content="Wikipedia Suche"/>
         </ComboBox>
 
-        <ComboBox x:Name ="Languages" SelectedIndex="0" HorizontalAlignment="Left" Margin="165,10,0,0" VerticalAlignment="Top" Width="140" Visibility="Hidden" >
+        <ComboBox x:Name ="Languages" SelectedIndex="0" HorizontalAlignment="Left" Margin="118,10,0,0" VerticalAlignment="Top" Width="140" Visibility="Hidden" Grid.Column="1" >
             <ListBoxItem Content="Auswahlsprache"/>
             <ListBoxItem Content="Yoda"/>
             <ListBoxItem Content="Redneck"/>
@@ -38,11 +50,14 @@
 
 
 
-        <TextBlock x:Name="Translated" HorizontalAlignment="Left" Margin="16,84,0,83" Width="760" Height="50"/>
-        <TextBlock x:Name="Text" HorizontalAlignment="Left" Margin="16,156,0,28" Width="760" Height="50"/>
-        <TextBlock x:Name="Translation"  Margin="16,21,24,146"  Width="760" Height="50" Grid.Row="1"/>
-        <Button Click="WikiSuche"  x:Name="Wiki" Content="Wikipediasuche" HorizontalAlignment="Left" Margin="688,153,0,0" VerticalAlignment="Top" Width="96" Height="29" Grid.Row="1" RenderTransformOrigin="0.519,-0.447" />
-        <WebBrowser x:Name="Bloedmann" Margin="0,38,0,92" Grid.RowSpan="2" Visibility="Hidden"/>
+        <TextBlock x:Name="Translated" HorizontalAlignment="Left" Margin="16,81,0,86" Width="760" Height="50" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="Text" HorizontalAlignment="Left" Margin="16,167,0,0" Width="760" Height="50" Grid.ColumnSpan="2"/>
+        <TextBlock x:Name="Translation"  Margin="32,54,40,113"  Width="760" Height="50" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <Button Click="WikiSuche"  x:Name="Wiki" Content="Wikipediasuche" HorizontalAlignment="Left" Margin="641,160,0,0" VerticalAlignment="Top" Width="96" Height="29" Grid.Row="1" RenderTransformOrigin="0.519,-0.447" Grid.Column="1" />
+        <WebBrowser x:Name="Bloedmann" Margin="0,38,0,92" Grid.RowSpan="2" Visibility="Hidden" Grid.ColumnSpan="2"/>
+        <Label Content="Übersetzter Text" HorizontalAlignment="Left" Margin="22,46,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" FontWeight="Bold"/>
+        <Label Content="Dein Text" HorizontalAlignment="Left" Margin="22,136,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" FontWeight="Bold"/>
+        <Label Content="Übersetzte Sprache&#xD;&#xA;" HorizontalAlignment="Left" Margin="22,20,0,0" Grid.Row="1" VerticalAlignment="Top" Grid.ColumnSpan="2" FontWeight="Bold" Height="27"/>
 
 
 
