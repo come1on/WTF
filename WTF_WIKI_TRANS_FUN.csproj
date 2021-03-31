@@ -8,15 +8,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="communityIcon_s3236o15ufk41.png" />
-  </ItemGroup>
-
-  <ItemGroup>
     <PackageReference Include="Newtonsoft.Json" Version="13.0.1" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <Resource Include="communityIcon_s3236o15ufk41.png" />
   </ItemGroup>
 
 </Project>
